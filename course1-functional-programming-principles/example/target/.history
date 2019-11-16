@@ -1,0 +1,7 @@
+max(List(1,2,3))
+a=List(1,2,3)
+Lists._list(1,2,3)
+import example.Lists._
+console
+import example.Lists._
+console

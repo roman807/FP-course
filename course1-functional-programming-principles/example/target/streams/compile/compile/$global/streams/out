@@ -1,0 +1,9 @@
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/example/src/main/scala/example/Lists.scala:48:40: value > is not a member of type parameter A[0m
+[0m[[0m[31merror[0m] [0m[0m    case x :: y :: rest => max( (if (x > y) x else y) :: rest )[0m
+[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/example/src/main/scala/example/Lists.scala:48:31: missing argument list for method max in object Lists[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `max _` or `max(_)(_)` instead of `max`.[0m
+[0m[[0m[31merror[0m] [0m[0m    case x :: y :: rest => max( (if (x > y) x else y) :: rest )[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
