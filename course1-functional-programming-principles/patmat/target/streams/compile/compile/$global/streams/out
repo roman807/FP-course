@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course1-functional-programming-principles/patmat/src/main/scala/patmat/Huffman.scala:92:46: not found: value unique_chars[0m
+[0m[[0m[31merror[0m] [0m[0m      else if (isin(chars.head, chars.tail)) unique_chars(chars.tail)[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course1-functional-programming-principles/patmat/src/main/scala/patmat/Huffman.scala:93:26: not found: value unique_chars[0m
+[0m[[0m[31merror[0m] [0m[0m      else chars.head :: unique_chars(chars.tail)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
