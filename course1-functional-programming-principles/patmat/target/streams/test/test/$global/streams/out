@@ -2,18 +2,28 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(patmat.HuffmanSuite, sbt.ForkMain$AnnotatedFingerscan@36198f0c, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(patmat.HuffmanSuite, sbt.ForkMain$AnnotatedFingerscan@56644c72, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mchars of a larger tree (10pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mchars of a larger tree (10pts)[0m finished, took 0.05 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mchars of a larger tree (10pts)[0m finished, took 0.053 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mweight of a larger tree (10pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mweight of a larger tree (10pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mweight of a larger tree (10pts)[0m finished, took 0.005 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mdecode and encode a very short text should be identity (10pts)[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[31mdecode and encode a very short text should be identity (10pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.059 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode(Huffman.scala:183)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode$(Huffman.scala:183)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.encode(Huffman.scala:221)[0m
+[0m[[0m[31merror[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[31mdecode and encode a very short text should be identity (10pts)[0m failed: java.lang.[31mUnsupportedOperationException[0m: tail of empty list, took 0.071 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Nil$.tail(List.scala:601)[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.collection.immutable.Nil$.tail(List.scala:598)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode(Huffman.scala:238)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode$(Huffman.scala:232)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.encode(Huffman.scala:281)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode(Huffman.scala:238)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode$(Huffman.scala:232)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.encode(Huffman.scala:281)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode(Huffman.scala:238)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode$(Huffman.scala:232)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.encode(Huffman.scala:281)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode(Huffman.scala:236)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.encode$(Huffman.scala:232)[0m
+[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.encode(Huffman.scala:281)[0m
 [0m[[0m[31merror[0m] [0m[0m    at patmat.HuffmanSuite$$anon$3.this([35mHuffmanSuite.scala[0m:[33m42[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at patmat.HuffmanSuite.decode and encode a very short text should be identity (10pts)([35mHuffmanSuite.scala[0m:[33m41[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
@@ -21,39 +31,17 @@
 [0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:566)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mdecode and encode a very short text should be identity (10pts)[0m finished, took 0.065 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mdecode and encode a very short text should be identity (10pts)[0m finished, took 0.078 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mstring2chars hello world[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mstring2chars hello world[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mstring2chars hello world[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mcombine of some leaf list (15pts)[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[31mcombine of some leaf list (15pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.001 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.combine(Huffman.scala:124)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.combine$(Huffman.scala:124)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.combine(Huffman.scala:221)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.HuffmanSuite.combine of some leaf list (15pts)([35mHuffmanSuite.scala[0m:[33m36[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:566)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mcombine of some leaf list (15pts)[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mcombine of some leaf list (15pts)[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mmake ordered leaf list for some frequency table (15pts)[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[31mmake ordered leaf list for some frequency table (15pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.makeOrderedLeafList(Huffman.scala:105)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman.makeOrderedLeafList$(Huffman.scala:105)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.Huffman$.makeOrderedLeafList(Huffman.scala:221)[0m
-[0m[[0m[31merror[0m] [0m[0m    at patmat.HuffmanSuite.make ordered leaf list for some frequency table (15pts)([35mHuffmanSuite.scala[0m:[33m31[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
-[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:566)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest patmat.[33mHuffmanSuite[0m.[36mmake ordered leaf list for some frequency table (15pts)[0m finished, took 0.004 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m3 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 0.183s[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 0.201s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 6, Failed 3, Errors 0, Passed 3[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 6, Failed 1, Errors 0, Passed 5[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	patmat.HuffmanSuite[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
