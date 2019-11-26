@@ -1,4 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course1-functional-programming-principles/patmat/src/main/scala/patmat/Huffman.scala:230:3: '=>' expected but '}' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  }[0m
-[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course1-functional-programming-principles/patmat/src/main/scala/patmat/Huffman.scala:301:33: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : List[Huffman.this.Bit][0m
+[0m[[0m[31merror[0m] [0m[0m    (which expands to)  List[Int][0m
+[0m[[0m[31merror[0m] [0m[0m required: Huffman.this.Bit[0m
+[0m[[0m[31merror[0m] [0m[0m    (which expands to)  Int[0m
+[0m[[0m[31merror[0m] [0m[0m    else codeBits(convert(tree))(text.head) :: quickEncode(tree)(text.tail)[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
