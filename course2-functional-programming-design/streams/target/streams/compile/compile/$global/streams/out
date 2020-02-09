@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course2-functional-programming-design/streams/src/main/scala/streams/StringParserTerrain.scala:68:22: value x is not a member of StringParserTerrain.this.Pos[0m
+[0m[[0m[31merror[0m] [0m[0m        if (position.x == xAxis) validColumn(levelVector.head, position.y)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/roman/Documents/Projects/FunctionalProgramming/course2-functional-programming-design/streams/src/main/scala/streams/StringParserTerrain.scala:68:73: value y is not a member of StringParserTerrain.this.Pos[0m
+[0m[[0m[31merror[0m] [0m[0m        if (position.x == xAxis) validColumn(levelVector.head, position.y)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
