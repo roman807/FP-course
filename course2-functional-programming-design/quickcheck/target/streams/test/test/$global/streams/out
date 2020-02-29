@@ -1,0 +1,46 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalacheck.ScalaCheckFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(quickcheck.QuickCheckBinomialHeap, sbt.ForkMain$SubclassFingerscan@261c7094, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen1: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen2: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen3: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen4a: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen4b: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m! Heap.gen4c: Falsified after 42 passed tests.[0m
+[0m[[0m[0minfo[0m] [0m[0m> ARG_0: List(Node(-631173210,0,List()), Node(-2147483648,1,List(Node(-1348067541,0,List()))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen5: OK, passed 100 tests.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m+ Heap.gen6: OK, passed 100 tests.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 8 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(quickcheck.QuickCheckSuite, sbt.ForkMain$AnnotatedFingerscan@4472206c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (5) binomial heap does not satisfy properties. (10pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (5) binomial heap does not satisfy properties. (10pts)[0m finished, took 0.009 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (4) binomial heap does not satisfy properties. (10pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (4) binomial heap does not satisfy properties. (10pts)[0m finished, took 0.057 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (3) binomial heap does not satisfy properties. (10pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (3) binomial heap does not satisfy properties. (10pts)[0m finished, took 0.024 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (2) binomial heap does not satisfy properties. (10pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (2) binomial heap does not satisfy properties. (10pts)[0m finished, took 0.042 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBinomial heap satisfies properties. (5pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[31mBinomial heap satisfies properties. (5pts)[0m failed: java.lang.[31mAssertionError[0m: null, took 0.004 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at quickcheck.QuickCheckSuite.Binomial heap satisfies properties. (5pts)([35mQuickCheckSuite.scala[0m:[33m36[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[0m[31merror[0m] [0m[0m    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m    at java.lang.reflect.Method.invoke(Method.java:566)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBinomial heap satisfies properties. (5pts)[0m finished, took 0.006 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (1) binomial heap does not satisfy properties. (10pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest quickcheck.[33mQuickCheckSuite[0m.[36mBogus (1) binomial heap does not satisfy properties. (10pts)[0m finished, took 0.003 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 0.152s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for ScalaCheck not available.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 14, Failed 2, Errors 0, Passed 12[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	quickcheck.QuickCheckBinomialHeap[0m
+[0m[[0m[31merror[0m] [0m[0m	quickcheck.QuickCheckSuite[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
