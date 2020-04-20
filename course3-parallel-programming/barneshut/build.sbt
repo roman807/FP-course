@@ -10,3 +10,4 @@ libraryDependencies ++= Seq(
 )
 
 testOptions in Test += Tests.Argument(TestFrameworks.JUnit, "-a", "-v", "-s")
+sbtVersion := "1.2.8" // <-- remove again (coursierResolution error...)

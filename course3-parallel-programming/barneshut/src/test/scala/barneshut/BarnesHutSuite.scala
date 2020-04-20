@@ -70,6 +70,25 @@ import FloatOps._
     }
   }
 
+  //new test
+//  @Test def `Leaf.insert(b) should return a Leaf with additional body`: Unit = {
+////    val quad = Empty(51f, 46.3f, 5f)
+//    val b1 = new Body(2f, 53f, 45f, 0f, 0f)
+//    val quad = Leaf(51f, 46.3f, 5f, Seq(b1))
+//    val b = new Body(3f, 54f, 46f, 0f, 0f)
+//    val inserted = quad.insert(b)
+//    inserted match {
+//      case Leaf(centerX, centerY, size, bodies) =>
+//        assert(centerX == 51f, s"$centerX should be 51f")
+//        assert(centerY == 46.3f, s"$centerY should be 46.3f")
+//        assert(size == 5f, s"$size should be 5f")
+////        assert(bodies == Seq(b), s"$bodies should contain only the inserted body")
+//        assert(bodies == Seq(b1, b), s"$bodies should contain original and newly inserted body")
+//      case _ =>
+//        fail("Empty.insert() should have returned a Leaf, was $inserted")
+//    }
+//  }
+
   // test cases for Body
 
   @Test def `Body.updated should do nothing for Empty quad trees`: Unit = {
