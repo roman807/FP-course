@@ -31,8 +31,8 @@ object WikipediaRanking extends WikipediaRankingInterface {
    */
   def occurrencesOfLang(lang: String, rdd: RDD[WikipediaArticle]): Int =
     rdd.aggregate(0)(
-      (_, wa: WikipediaArticle) => if(wa.mentionsLanguage(lang)) 1 else 0,
-      (c1: Int, c2: Int) => c1 + c2
+      (n: Int, wa: WikipediaArticle) => n + (if(wa.mentionsLanguage(lang)) 1 else 0),
+      _ + _
     )
 
   /** (1) Use `occurrencesOfLang` to compute the ranking of the languages
@@ -54,27 +54,51 @@ object WikipediaRanking extends WikipediaRankingInterface {
     case head::tail => (head, occurrencesOfLang(head, rdd)) :: getList(tail, rdd)
   }
 
-  /* Compute an inverted index of the set of articles, mapping each language
+  /** Compute an inverted index of the set of articles, mapping each language
    * to the Wikipedia pages in which it occurs.
    */
-  def makeIndex(langs: List[String], rdd: RDD[WikipediaArticle]): RDD[(String, Iterable[WikipediaArticle])] = ???
+  def makeIndex(langs: List[String], rdd: RDD[WikipediaArticle]): RDD[(String, Iterable[WikipediaArticle])] = {
+    rdd.flatMap(wa => getLangWaTuples(langs, wa)).groupByKey()
+  }
 
-  /* (2) Compute the language ranking again, but now using the inverted index. Can you notice
+  def getLangWaTuples(langs: List[String], wa: WikipediaArticle): TraversableOnce[(String, WikipediaArticle)] = {
+    var a = List[(String, WikipediaArticle)]()
+    for (lang <- langs) {
+      if (wa.mentionsLanguage(lang)) a = a :+ (lang, wa)
+    }
+    a
+  }
+
+
+  /** (2) Compute the language ranking again, but now using the inverted index. Can you notice
    *     a performance improvement?
    *
    *   Note: this operation is long-running. It can potentially run for
    *   several seconds.
    */
-  def rankLangsUsingIndex(index: RDD[(String, Iterable[WikipediaArticle])]): List[(String, Int)] = ???
+  def rankLangsUsingIndex(index: RDD[(String, Iterable[WikipediaArticle])]): List[(String, Int)] = {
+    index.mapValues(x => x.size).collect().toList.sortBy(_._2).reverse
+  }
 
-  /* (3) Use `reduceByKey` so that the computation of the index and the ranking are combined.
+  /** (3) Use `reduceByKey` so that the computation of the index and the ranking are combined.
    *     Can you notice an improvement in performance compared to measuring *both* the computation of the index
    *     and the computation of the ranking? If so, can you think of a reason?
    *
    *   Note: this operation is long-running. It can potentially run for
    *   several seconds.
    */
-  def rankLangsReduceByKey(langs: List[String], rdd: RDD[WikipediaArticle]): List[(String, Int)] = ???
+  def rankLangsReduceByKey(langs: List[String], rdd: RDD[WikipediaArticle]): List[(String, Int)] = {
+    rdd.flatMap(wa => getLangWaCntTuples(langs, wa)).reduceByKey((a, b) => a + b).collect().toList.sortBy(_._2).reverse
+  }
+
+  def getLangWaCntTuples(langs: List[String], wa: WikipediaArticle): TraversableOnce[(String, Int)] = {
+    var a = List[(String, Int)]()
+    for (lang <- langs) {
+      if (wa.mentionsLanguage(lang)) a = a :+ (lang, 1)
+    }
+    a
+  }
+
 
   def main(args: Array[String]): Unit = {
 
