@@ -55,7 +55,7 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     else
       findMin(h) :: toList1(deleteMin(h))
   }
-  
+
   property("gen4b") = forAll { h: H =>
     val l2 = toList1(h)
     l2 == l2.sorted
